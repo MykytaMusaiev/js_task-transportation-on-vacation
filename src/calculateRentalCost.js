@@ -7,10 +7,13 @@ function calculateRentalCost(days) {
   const daylyRentSum = 40;
   const shortTermDiscount = 20;
   const longTermDiscount = 50;
+  const oneDayRent = 1;
+  const twoDayRent = 2;
+  const longRentTime = 7;
 
-  return days === 1 || days === 2
+  return days === oneDayRent || days === twoDayRent
     ? days * daylyRentSum
-    : days >= 7
+    : days >= longRentTime
       ? days * daylyRentSum - longTermDiscount
       : days * daylyRentSum - shortTermDiscount;
 }
