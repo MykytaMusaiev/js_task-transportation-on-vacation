@@ -11,8 +11,8 @@ function calculateRentalCost(days) {
   return days === 1 || days === 2
     ? days * daylyRentSum
     : days >= 7
-      ? days * daylyRentSum - shortTermDiscount
-      : days * daylyRentSum - longTermDiscount;
+      ? days * daylyRentSum - longTermDiscount
+      : days * daylyRentSum - shortTermDiscount;
 }
 
 module.exports = calculateRentalCost;
